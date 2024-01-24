@@ -1,0 +1,282 @@
+html {
+    font-family: "Space Mono", monospace;
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: .5rem;
+    font-size: 1rem;
+    max-width: 50%;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-top: .5rem;
+    transition: .3s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    transition: .3s ease-in-out;
+}
+
+section {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 12px 12px;
+    border-color: transparent transparent white transparent;
+}
+
+section p {
+    line-height: 1.2rem;
+    margin-left: .5rem;
+}
+
+section img {
+    max-width: 80%;
+    align-self: center;
+    margin: 1rem;
+    border: 1px solid white;
+}
+
+section button {
+    align-self: end;
+    min-width: 50%;
+    margin-right: .5rem;
+}
+
+.box-revert {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    position: relative;
+}
+
+.box-revert img {
+    border-color: black;
+}
+
+.box-revert button {
+    background-color: white;
+    color: black;
+    border-color: black;
+    transition: .3s ease-in-out;
+}
+
+.box-revert button:hover {
+    background-color: black;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+.box-revert::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 12px 12px;
+    border-color: transparent transparent black transparent;
+}
+
+/* ________ HEADER _______ */
+@media (max-width:801px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        align-items: center;
+    }
+
+    #menu {
+        padding: 1rem 0 0 0;
+    }
+}
+
+@media (min-width:801px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        justify-content: space-between;
+    }
+
+    #logo {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    #menu {
+        display: flex;
+        align-items: end;
+        padding: 0 5rem 0 0;
+    }
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+#logo h1 {
+    padding: .3rem 2rem .3rem .7rem;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    transition: 1s ease-in-out;
+}
+
+#logo h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 12px 12px;
+    border-color: transparent transparent white transparent;
+    transition: 1s ease-in-out;
+}
+
+#logo h1:hover {
+    background-color: white;
+    color: black;
+    transition: 1s ease-in-out;
+}
+
+#logo h1:hover:after {
+    border-color: transparent transparent black transparent;
+    transition: 1s ease-in-out;
+}
+
+#logo a {
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+#logo img {
+    width: 4rem;
+    border-radius: 50%;
+    transition: 1s ease-in;
+}
+
+#logo img:hover {
+    transform: rotate(60deg);
+    transition: 1s ease-in-out;
+}
+
+#menu nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 15rem;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+}
+
+#menu nav ul li {
+    width: 4rem;
+}
+
+#menu a {
+    text-decoration: none;
+    color: black;
+    transition: .3s ease-in-out;
+}
+
+#menu a:hover {
+    text-decoration: wavy underline;
+    color: yellowgreen;
+    transition: .3s ease-in-out;
+}
+
+.point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot {
+    font-size: 1.2rem;
+    color: red;
+    cursor: no-drop;
+}
+
+.active {
+    color: blue;
+}
+
+/* ________ FOOTER __________ */
+footer {
+    border-top: 2px solid black;
+    padding: 1.5rem;
+    background-color: black;
+    color: white;    
+}
+
+#dial {
+    display: flex;
+    justify-content: end;
+}
+
+#dial ul {
+    list-style: none;
+    display: flex;
+    gap: .3rem;
+    cursor: pointer;
+    width: max-content;
+}
+
+#dial ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+#dial ul li:hover {
+    background-color: yellowgreen;
+    color: black;
+    transition: .3s ease-in-out;
+}
