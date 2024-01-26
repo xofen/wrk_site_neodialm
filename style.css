@@ -1,0 +1,22 @@
+@media (max-width:801px) {
+
+}
+
+@media (min-width:801px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        column-count: 2;
+        margin-bottom: 2rem;
+        max-width: 60svw;
+        align-self: center;
+    }
+
+    main section {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+}
